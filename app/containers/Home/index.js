@@ -258,17 +258,17 @@ export default class Home extends React.PureComponent {
           </div>
           <div style={menuStyle}>
           <ul style={menu} class="side-nav header-links">
-	           <li><a data-wsid="ws-signin" class="signInLink" href="/my_account/index.jsp">Sign In</a></li>	<li><a data-wsid="ws-register" href="/my_account/index.jsp">Register</a></li>
-	           <li><a href="/catalog_request/index.jsp">Request A FREE Catalog</a></li>
+	           <Link><a data-wsid="ws-signin" class="signInLink" href="/my_account/index.jsp">Sign In</a></Link>	<Link><a data-wsid="ws-register" href="/my_account/index.jsp">Register</a></Link>
+	           <Link><a href="/catalog_request/index.jsp">Request A FREE Catalog</a></Link>
 					<div class="show-for-small">
-						 <li><a data-reveal-id="emailSignUp" href="#" data-wsid="ws-emailsignup">Sign Up For Email Offers</a></li>
+						 <Link><a data-reveal-id="emailSignUp" href="#" data-wsid="ws-emailsignup">Sign Up For Email Offers</a></Link>
 					</div>
-						<li><a href="/shopCatalogs">Shop Our Catalogs</a></li>
+						<Link><a href="/shopCatalogs">Shop Our Catalogs</a></Link>
 
-						<li data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="/catalog/catalog_quick_order.jsp">Quick Order Form</a></li>
-						<li data-wsid="ws-manageaccountEF"><a data-wsid="ws-manageaccount" href="/my_account/manage_account.jsp">Your Account</a></li>
-	          <li><a href="/my_account/order_history/order_history_listing.jsp">Order Status</a></li>
-	          <li><a href="/content/faq">Frequently Asked Questions</a></li>
+						<Link data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="/catalog/catalog_quick_order.jsp">Quick Order Form</a></Link>
+						<Link data-wsid="ws-manageaccountEF"><a data-wsid="ws-manageaccount" href="/my_account/manage_account.jsp">Your Account</a></Link>
+	          <Link><a href="/my_account/order_history/order_history_listing.jsp">Order Status</a></Link>
+	          <Link><a href="/content/faq">Frequently Asked Questions</a></Link>
 	          </ul>
 
             <footer style={footer}>
