@@ -24,6 +24,44 @@ import FlatButton from "material-ui/FlatButton";
 
 
 export default class Home extends React.PureComponent {
+  constructor(props){
+  super(props);
+  this.state={
+    email:"",
+  }
+}
+    handleEmail = (event) => {
+    this.setState({
+    email:event.target.value
+  })
+}
+
+    storeContact = () => {
+    var data = new FormData ();
+    data.append("email", this.state.email);
+
+    fetch("http://localhost:8000/api/storeEmail",{
+    method:"post",
+    body:data
+  })
+    .then(function(response){
+    return response.json();
+  })
+    .then(function(json){
+    if(json.success){
+    this.setState({
+    email:""
+
+  })
+    alert(json.success);
+  }
+
+    else if (json.error){
+    alert(json.error);
+  }
+  }.bind(this))
+}
+
   render() {
     const headerStyle={
       display:"flex",
@@ -181,7 +219,8 @@ export default class Home extends React.PureComponent {
     }
     const article2={
       fontSize:"20px",
-      fontFamily:"Railway"
+      fontFamily:"Railway",
+      color:"#ffffff"
 
     }
     const menu={
@@ -223,7 +262,7 @@ export default class Home extends React.PureComponent {
           <header style={headerStyle}>
             <nav style={navBar}>
               <div style={logoStyle}></div>
-              <Link to="/Home" style={navLink}>Home</Link>
+              <Link to="/" style={navLink}>Home</Link>
               <Link to="/Products" style={navLink}>Products</Link>
               <Link to="/About" style={navLink}>About</Link>
               <Link to="/Contact" style={navLink}>Contact</Link>
@@ -245,9 +284,9 @@ export default class Home extends React.PureComponent {
           </div>
 
           <div style={h2}>
-            <div style={article}>SWASH TENTS</div>
-            <div style={article}>LED LATTERNS</div>
-            <div style={article}>HAMMICKS</div>
+            <Link style={article} to="/Tents">Tents</Link>
+            <Link style={article} to="/LedLanterns">Led Lanterns</Link>
+            <Link style={article} to="/Hammicks">Hammicks</Link>
           </div>
 
           <div style={container}>
