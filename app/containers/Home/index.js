@@ -19,6 +19,7 @@ import AttachMoney from 'material-ui/svg-icons/editor/attach-money';
 import CheckCircle from 'material-ui/svg-icons/action/check-circle';
 import Toggle from 'material-ui/Toggle';
 import FlatButton from "material-ui/FlatButton";
+import RaisedButton from 'material-ui/RaisedButton';
 
 
 
@@ -207,20 +208,25 @@ export default class Home extends React.PureComponent {
       width:"100%",
       height:"500px",
       justifyContent:"space-around",
-      justifyContent:"center"
-
+      justifyContent:"center",
+      backgroundImage: "url(http://awesomwallpaper.com/img1/C69A882C5159/beautiful-argentina-landscape.jpg)",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize:"cover",
     }
     const imageStyle2={
-      background:"url(http://h4z.it/Image/d8b85c_4598_960_720.png)",
       backgroundSize:"cover",
       width:"600px",
-      height:"400px"
+      height:"400px",
+      marginTop:"25px"
 
     }
     const article2={
-      fontSize:"20px",
+      fontSize:"30px",
       fontFamily:"Railway",
-      color:"#ffffff"
+      color:"#ffffff",
+      alignSelf:"center"
 
     }
     const menu={
@@ -246,10 +252,29 @@ export default class Home extends React.PureComponent {
 
     }
     const link={
-      background:"url(http://blogs.burton.com/blogs/media/images/17BG-AnnieJ-06.2e16d0ba.fill-1000x800-c75.jpg)",
+      background:"#ffffff",
       backgroundSize:"cover",
       width:"100%",
       height:"800px"
+
+    }
+    const containerTwo={
+      display:"flex",
+      flexDirection:"column",
+      justifyContent:"center",
+      width:"500px",
+      height:"500px",
+      alignItems:"center"
+    }
+    const wrapper={
+
+    }
+    const buttonStyle={
+      margin:"12"
+
+    }
+    const button={
+    margin:"12"
 
     }
     return (
@@ -290,46 +315,144 @@ export default class Home extends React.PureComponent {
           </div>
 
           <div style={container}>
-            <div style={article2}></div>
+            <div style={article2}>A company's best advantage should be a quality product offered at the right price.</div>
             <div style={imageStyle2}></div>
             <div style={article2}></div>
 
+
           </div>
-          <div style={menuStyle}>
-          <ul style={menu} class="side-nav header-links">
-	           <Link><a data-wsid="ws-signin" class="signInLink" href="/my_account/index.jsp">Sign In</a></Link>	<Link><a data-wsid="ws-register" href="/my_account/index.jsp">Register</a></Link>
-	           <Link><a href="/catalog_request/index.jsp">Request A FREE Catalog</a></Link>
-					<div class="show-for-small">
-						 <Link><a data-reveal-id="emailSignUp" href="#" data-wsid="ws-emailsignup">Sign Up For Email Offers</a></Link>
-					</div>
-						<Link><a href="/shopCatalogs">Shop Our Catalogs</a></Link>
 
-						<Link data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="/catalog/catalog_quick_order.jsp">Quick Order Form</a></Link>
-						<Link data-wsid="ws-manageaccountEF"><a data-wsid="ws-manageaccount" href="/my_account/manage_account.jsp">Your Account</a></Link>
-	          <Link><a href="/my_account/order_history/order_history_listing.jsp">Order Status</a></Link>
-	          <Link><a href="/content/faq">Frequently Asked Questions</a></Link>
-	          </ul>
-
-            <footer style={footer}>
-              <div style={link}></div>
-            </footer>
+            <div style={containerTwo}>
+              <TextField style={wrapper}
+                hintText="Email"
+                /><br />
+              <br />
+              <TextField style={wrapper}
+                hintText="Password"
+                /><br />
+              <TextField style={wrapper}
+                id="Forgot Username Or Password"
+                defaultValue="Forgot Username Or Password"
+                /><br />
+              <TextField style={wrapper}
+                hintText="Send By Email"
+                floatingLabelText="Forgot User ID"
+                /><br />
+              <TextField style={wrapper}
+                defaultValue="Send By Email"
+                floatingLabelText="Forgot Password"
+                /><br />
+            <div style={button}>
+             <RaisedButton label="Log In" primary={true} style={buttonStyle} />
+            </div>
             </div>
 
 
 
 
 
+            <footer style={footer}>
+              <div style={link}></div>
 
-
-
-
-
+            </footer>
 
 
         </Responsive>
         </div>
 
-      </div>
+
+
+        <Responsive maxDeviceWidth={1023}>
+          <div>
+          <header style={headerStyle}>
+
+            <nav style={navBar}>
+              <div style={logoStyle}></div>
+              <Link to="/" style={navLink}>Home</Link>
+              <Link to="/Products" style={navLink}>Products</Link>
+              <Link to="/About" style={navLink}>About</Link>
+              <Link to="/Contact" style={navLink}>Contact</Link>
+            </nav>
+          <div style={boxOne}>
+            <div style={heading}></div>
+            <div style={parStyle1}></div>
+            <h1 style={h1}>Swashbuckler:</h1>
+            <p style={paragraphStyle}>Swaggering or daring soldier or adventurer.</p>
+          </div>
+          </header>
+          </div>
+
+
+          <div style={mainStyle}>
+            <div style={boxTwo}></div>
+            <div style={boxThree}></div>
+            <div style={boxFour}></div>
+          </div>
+
+          <div style={h2}>
+            <Link style={article} to="/Tents">Tents</Link>
+            <Link style={article} to="/LedLanterns">Led Lanterns</Link>
+            <Link style={article} to="/Hammicks">Hammicks</Link>
+          </div>
+
+          <div style={container}>
+            <div style={article2}>A company's best advantage should be a quality product offered at the right price.</div>
+            <div style={imageStyle2}></div>
+            <div style={article2}></div>
+
+          </div>
+          <div style={menuStyle}>
+          <ul style={menu} class="side-nav header-links">
+             <Link><a data-wsid="ws-signin" class="signInLink" href="/my_account/index.jsp">Sign In</a></Link>	<Link><a data-wsid="ws-register" href="/my_account/index.jsp">Register</a></Link>
+             <Link><a href="/catalog_request/index.jsp">Request A FREE Catalog</a></Link>
+          <div class="show-for-small">
+             <Link><a data-reveal-id="emailSignUp" href="#" data-wsid="ws-emailsignup">Sign Up For Email Offers</a></Link>
+          </div>
+            <Link><a href="/shopCatalogs">Shop Our Catalogs</a></Link>
+
+            <Link data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="/catalog/catalog_quick_order.jsp">Quick Order Form</a></Link>
+            <Link data-wsid="ws-manageaccountEF"><a data-wsid="ws-manageaccount" href="/my_account/manage_account.jsp">Your Account</a></Link>
+            <Link><a href="/my_account/order_history/order_history_listing.jsp">Order Status</a></Link>
+            <Link><a href="/content/faq">Frequently Asked Questions</a></Link>
+            </ul>
+
+            <div style={containerTwo}>
+            <TextField style={wrapper}
+              hintText="Email"
+              /><br />
+            <br />
+            <TextField style={wrapper}
+              hintText="Password"
+              /><br />
+            <TextField style={wrapper}
+              id="Forgot Username Or Password"
+              defaultValue="Forgot Username Or Password"
+              /><br />
+            <TextField style={wrapper}
+              hintText="Send By Email"
+              floatingLabelText="Forgot User ID"
+              /><br />
+            <TextField style={wrapper}
+              defaultValue="Send By Email"
+              floatingLabelText="Forgot Password"
+              /><br />
+            </div>
+
+            <div style={button}>
+             <RaisedButton label="Log In" primary={true} style={buttonStyle} />
+            </div>
+
+
+
+            <footer style={footer}>
+              <div style={link}></div>
+            </footer>
+            </div>
+        </Responsive>
+        </div>
+
+
+
     );
   }
 }
