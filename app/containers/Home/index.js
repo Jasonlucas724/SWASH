@@ -320,41 +320,41 @@ export default class Home extends React.PureComponent {
             <div style={article2}></div>
 
 
-          </div>
+        </div>
 
-            <div style={containerTwo}>
-              <TextField style={wrapper}
-                hintText="Email"
-                /><br />
-              <br />
-              <TextField style={wrapper}
-                hintText="Password"
-                /><br />
-              <TextField style={wrapper}
-                id="Forgot Username Or Password"
-                defaultValue="Forgot Username Or Password"
-                /><br />
-              <TextField style={wrapper}
-                hintText="Send By Email"
-                floatingLabelText="Forgot User ID"
-                /><br />
-              <TextField style={wrapper}
-                defaultValue="Send By Email"
-                floatingLabelText="Forgot Password"
-                /><br />
-            <div style={button}>
-             <RaisedButton label="Log In" primary={true} style={buttonStyle} />
-            </div>
-            </div>
-
-
+        <div style={containerTwo}>
+          <TextField style={wrapper}
+            hintText="Email"
+            /><br />
+          <br />
+          <TextField style={wrapper}
+            hintText="Password"
+            /><br />
+          <TextField style={wrapper}
+            id="Forgot Username Or Password"
+            defaultValue="Forgot Username Or Password"
+            /><br />
+          <TextField style={wrapper}
+            hintText="Send By Email"
+            floatingLabelText="Forgot User ID"
+            /><br />
+          <TextField style={wrapper}
+            defaultValue="Send By Email"
+            floatingLabelText="Forgot Password"
+            /><br />
+        <div style={button}>
+         <RaisedButton label="Log In" primary={true} style={buttonStyle} />
+        </div>
+        </div>
 
 
 
-            <footer style={footer}>
-              <div style={link}></div>
 
-            </footer>
+
+        <footer style={footer}>
+          <div style={link}></div>
+
+        </footer>
 
 
         </Responsive>
@@ -401,20 +401,6 @@ export default class Home extends React.PureComponent {
             <div style={article2}></div>
 
           </div>
-          <div style={menuStyle}>
-          <ul style={menu} class="side-nav header-links">
-             <Link><a data-wsid="ws-signin" class="signInLink" href="/my_account/index.jsp">Sign In</a></Link>	<Link><a data-wsid="ws-register" href="/my_account/index.jsp">Register</a></Link>
-             <Link><a href="/catalog_request/index.jsp">Request A FREE Catalog</a></Link>
-          <div class="show-for-small">
-             <Link><a data-reveal-id="emailSignUp" href="#" data-wsid="ws-emailsignup">Sign Up For Email Offers</a></Link>
-          </div>
-            <Link><a href="/shopCatalogs">Shop Our Catalogs</a></Link>
-
-            <Link data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="/catalog/catalog_quick_order.jsp">Quick Order Form</a></Link>
-            <Link data-wsid="ws-manageaccountEF"><a data-wsid="ws-manageaccount" href="/my_account/manage_account.jsp">Your Account</a></Link>
-            <Link><a href="/my_account/order_history/order_history_listing.jsp">Order Status</a></Link>
-            <Link><a href="/content/faq">Frequently Asked Questions</a></Link>
-            </ul>
 
             <div style={containerTwo}>
             <TextField style={wrapper}
