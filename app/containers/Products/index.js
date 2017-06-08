@@ -9,7 +9,27 @@ import Helmet from 'react-helmet';
 import {Link} from 'react-router';
 
 
+
 export default class Products extends React.PureComponent {
+  constructor(props){
+    super(props);
+    this.state = {
+      boxOne:"",
+      boxTwo:"",
+      boxThree:"",
+    }
+  }
+  componentWillMount(){
+    fetch("http://www.swashBox.com")
+    .then(function(res){
+      return res.json();
+    })
+    .then(function(json){
+      this.setState({
+        boxOne:json[0],
+      })
+    }.bind(this))
+  }
   render() {
     const navBar={
       display:"flex",
@@ -21,12 +41,6 @@ export default class Products extends React.PureComponent {
       justifyContent:"space-between",
       position:"fixed",
       top:"0",
-
-
-
-
-
-
     }
     const logoStyle={
       width:"200px",
@@ -42,73 +56,78 @@ export default class Products extends React.PureComponent {
       fontFamily:"Roboto, sans serif"
 
     }
-    const grid={
+
+
+    const mainStyle={
       display:"flex",
       flexDirection:"row",
-      alignItems:"space-around",
-      justifyContent:"space-around",
-      width:"100%",
-      height:"200px",
-
+      justifyContent:"space-around"
     }
     const boxOne={
-      width:"150px",
-      height:"150px",
-      background:"#000000",
-      marginTop:"500px",
-      background:"url(https://www.belounge.fr/wp-content/uploads/pagode-gris-clair-150x150.png)"
+      display:"flex",
+      flexDirection:"column",
+      width:"300px",
+      height:"300px",
+      background:"url()",
+      backgroundSize:"cover",
+      marginTop:"500px"
+    }
+    const heading={
+      display:"flex",
+      fontSize:"25px",
+      justifyContent:"center",
+      color:"#ffffff",
+      fontFamily:"Roboto, sans serif",
+      padding:"10px",
+      marginTop:"20px"
+    }
+    const parStyle1={
+      display:"flex",
+      fontSize:"15px",
+      justifyContent:"center",
+      color:"#ffffff",
+      fontFamily:"Roboto, sans serif",
+      padding:"10px",
+      marginTop:"20px"
+    }
+    const price={
+      display:"flex",
+      fontSize:"30px",
+      justifyContent:"center",
+      color:"#ffffff",
+      fontFamily:"Roboto, sans serif",
+      padding:"10px",
+      marginTop:"20px"
 
     }
-    const boxTwo={
-      width:"150px",
-      height:"150px",
-      background:"#000000",
-      marginTop:"500px",
-      background:"url(https://vignette2.wikia.nocookie.net/thehuntergame/images/2/24/Large_equipment_tent_alpine_camouflage_256.png/revision/latest/scale-to-width-down/150?cb=20160304221428)",
-
-
+    const buttonStyle={
+     width:"100px",
+     alignSelf:"center",
+     background:"green",
+     marginTop:"30px"
     }
-    const boxThree={
-      width:"150px",
-      height:"150px",
-      background:"#000000",
-      marginTop:"500px",
-      background:"url(http://gypsytents.com/UploadedFiles/ProductHomeThumb/Tents_Expedition_BLIZZARD-%20IV_Image.png)",
 
-
-    }
 
 
     return (
       <div>
         <Helmet title="Products" meta={[ { name: 'description', content: 'Description of Products' }]}/>
 
-
-        <header>
           <div>
-            <nav style={navBar}>
+            <header style={navBar}>
               <p style={logoStyle}></p>
-              <Link to="/" style={navLink}>Home</Link>
               <Link to="/Products" style={navLink}>Products</Link>
               <Link to="/About" style={navLink}>About</Link>
-              <Link to="/Contact" style={navLink}>Info</Link>
-            </nav>
+              <Link to="/Contact" style={navLink}>Contact</Link>
+            </header>
+
+
+            <main style={mainStyle}>
+              <div style={boxOne}>
+              </div>
+            
+            </main>
           </div>
-        </header>
-
-
-
-
-        <div>
-        <main style={grid}>
-         <div style={boxOne}></div>
-         <div style={boxTwo}></div>
-         <div style={boxThree}></div>
-
-
-        </main>
-        </div>
-
 
       </div>
     );

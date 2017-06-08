@@ -162,7 +162,7 @@ export default class Home extends React.PureComponent {
     const boxTwo={
       width:"300px",
       height:"300px",
-      background:"url(http://www.grandforksherald.com/sites/default/files/styles/square_300/public/field/image/Camping-Tent_2.jpg?itok=e0KYNrmP)",
+      background:"url(http://www.yak-tribe.com/wp-content/uploads/fishingbuddy.jpg)",
       backgroundSize:"100% 100%"
 
 
@@ -170,7 +170,7 @@ export default class Home extends React.PureComponent {
     const boxThree={
       width:"300px",
       height:"300px",
-      background:"url(http://www.bestsolarlighting.com/wp-content/uploads/2017/05/ThorFire-Solar-LED-USB-Rechargeable-Camping-Lantern-300x300.jpg)",
+      background:"url(https://s-media-cache-ak0.pinimg.com/736x/46/ae/cc/46aecccb2f911c8bf1b6d2a96c6ee9b2.jpg)",
 
 
 
@@ -178,7 +178,7 @@ export default class Home extends React.PureComponent {
     const boxFour={
       width:"300px",
       height:"300px",
-      background:"url(https://images-na.ssl-images-amazon.com/images/S/aplus-seller-content-images-us-east-1/ATVPDKIKX0DER/A1YFTV540Q9MWH/B00PT10RSA/V1fh6sVQcmS._UX300_TTW_.jpg)",
+      background:"url(https://images-na.ssl-images-amazon.com/images/I/61Bk-hUKwcL._SY300_.jpg)",
 
 
 
@@ -309,9 +309,9 @@ export default class Home extends React.PureComponent {
           </div>
 
           <div style={h2}>
-            <Link style={article} to="/Tents">Tents</Link>
-            <Link style={article} to="/LedLanterns">Led Lanterns</Link>
-            <Link style={article} to="/Hammicks">Hammicks</Link>
+            <Link style={article} to="/Fishing Gear">Fishing Gear</Link>
+            <Link style={article} to="/Camping Gear">Camping Gear</Link>
+            <Link style={article} to="/Hiking Gear">Hiking Gear</Link>
           </div>
 
           <div style={container}>
@@ -433,7 +433,7 @@ export default class Home extends React.PureComponent {
             <footer style={footer}>
               <div style={link}></div>
             </footer>
-            </div>
+
         </Responsive>
         </div>
 
