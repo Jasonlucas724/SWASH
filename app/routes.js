@@ -28,10 +28,10 @@ export default function createRoutes() {
        },
      },
      {
-        path: '/Gallery',
-        name: 'Gallery',
+        path: '/Contact',
+        name: 'contact',
         getComponent(nextState, comMod) {
-          import('containers/Gallery')
+          import('containers/Contact')
             .then(loadModule(comMod))
             .catch(errorLoading);
         },
@@ -45,42 +45,7 @@ export default function createRoutes() {
              .catch(errorLoading);
          },
        },
-       {
-          path: '/Tents',
-          name: 'tents',
-          getComponent(nextState, comMod) {
-            import('containers/Tents')
-              .then(loadModule(comMod))
-              .catch(errorLoading);
-          },
-        },
-        {
-           path: '/LedLanterns',
-           name: 'ledLanterns',
-           getComponent(nextState, comMod) {
-             import('containers/LedLanterns')
-               .then(loadModule(comMod))
-               .catch(errorLoading);
-           },
-         },
-         {
-            path: '/Hammicks',
-            name: 'Hammicks',
-            getComponent(nextState, comMod) {
-              import('containers/Hammicks')
-                .then(loadModule(comMod))
-                .catch(errorLoading);
-            },
-          },
-    {
-       path: '/Dashboard',
-       name: 'dashboard',
-       getComponent(nextState, comMod) {
-         import('containers/Dashboard')
-           .then(loadModule(comMod))
-           .catch(errorLoading);
-       },
-     },
+
      {
         path: '/SignIn',
         name: 'signIn',

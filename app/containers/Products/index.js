@@ -35,17 +35,16 @@ export default class Products extends React.PureComponent {
       display:"flex",
       flexDirection:"row",
       width:"100%",
-      height:"300px",
-      background:"url(http://fortheloveofwanderlust.com/wp-content/uploads/2014/08/campfire5.jpg)",
+      height:"100px",
       backgroundSize:"cover",
       justifyContent:"space-between",
-      position:"fixed",
-      top:"0",
+      background:"rgba(0,0,0,.5)",
+
     }
     const logoStyle={
       width:"200px",
       height:"200px",
-      background:"upl()",
+
       backgroundSize:"cover"
     }
     const navLink={
@@ -53,25 +52,12 @@ export default class Products extends React.PureComponent {
       display:"flex",
       color:"#000000",
       fontSize:"18px",
-      fontFamily:"Roboto, sans serif"
+      fontFamily:"Railway"
 
     }
 
 
-    const mainStyle={
-      display:"flex",
-      flexDirection:"row",
-      justifyContent:"space-around"
-    }
-    const boxOne={
-      display:"flex",
-      flexDirection:"column",
-      width:"300px",
-      height:"300px",
-      background:"url()",
-      backgroundSize:"cover",
-      marginTop:"500px"
-    }
+
     const heading={
       display:"flex",
       fontSize:"25px",
@@ -90,21 +76,34 @@ export default class Products extends React.PureComponent {
       padding:"10px",
       marginTop:"20px"
     }
-    const price={
+
+
+    const banner={
       display:"flex",
-      fontSize:"30px",
+      flexDirection:"row",
+      width:"100%",
+      height:"1500px",
+      justifyContent:"space-around",
       justifyContent:"center",
-      color:"#ffffff",
-      fontFamily:"Roboto, sans serif",
-      padding:"10px",
-      marginTop:"20px"
+      backgroundImage: "url(http://h4z.it/Image/55ec15_rouse-199230.jpg)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize:"cover",
 
     }
-    const buttonStyle={
-     width:"100px",
-     alignSelf:"center",
-     background:"green",
-     marginTop:"30px"
+    const columnOne={
+      width:"100%",
+      height:"200px",
+      background:"#000000"
+
+    }
+    const columnTwo={
+
+
+    }
+    const columnThree={
+
+
     }
 
 
@@ -114,19 +113,25 @@ export default class Products extends React.PureComponent {
         <Helmet title="Products" meta={[ { name: 'description', content: 'Description of Products' }]}/>
 
           <div>
-            <header style={navBar}>
+          <header>
+            <div style={navBar}>
               <p style={logoStyle}></p>
               <Link to="/Products" style={navLink}>Products</Link>
               <Link to="/About" style={navLink}>About</Link>
               <Link to="/Contact" style={navLink}>Contact</Link>
-            </header>
+          </div>
+          </header>
+          <main style={parStyle1}>
+            <div style={banner}></div>
+            <p style={columnOne}></p>
+            <p style={columnTwo}></p>
+          </main>
 
 
-            <main style={mainStyle}>
-              <div style={boxOne}>
-              </div>
-            
-            </main>
+
+
+
+
           </div>
 
       </div>
