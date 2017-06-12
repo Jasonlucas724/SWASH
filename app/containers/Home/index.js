@@ -90,11 +90,12 @@ export default class Home extends React.PureComponent {
 
     }
     const logoStyle={
-      width:"550px",
-      height:"500px",
+      width:"200px",
+      height:"50px",
       marginTop:"30px",
       color:"#ffffff",
-      backgroundSize:"100% 100%",
+      background:"url(http://h4z.it/Image/80b7ee_swash.png)",
+      backgroundSize:"100%,",
       marginLeft:"50px",
       fontSize:"30px",
 
@@ -309,9 +310,9 @@ export default class Home extends React.PureComponent {
           </div>
 
           <div style={h2}>
-            <Link style={article} to="/Fishing Gear">Fishing Gear</Link>
-            <Link style={article} to="/Camping Gear">Camping Gear</Link>
-            <Link style={article} to="/Hiking Gear">Hiking Gear</Link>
+            <h1 style={article} to="/Fishing Gear">Fishing Gear</h1>
+            <h1 style={article} to="/Camping Gear">Camping Gear</h1>
+            <h1 style={article} to="/Hiking Gear">Hiking Gear</h1>
           </div>
 
           <div style={container}>
