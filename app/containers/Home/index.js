@@ -259,6 +259,13 @@ export default class Home extends React.PureComponent {
       height:"800px"
 
     }
+    const copyright={
+      display:"flex",
+      justifyContent:"center",
+      fontSize:"20px",
+      marginTop:"100px"
+
+    }
     const containerTwo={
       display:"flex",
       flexDirection:"column",
@@ -275,9 +282,10 @@ export default class Home extends React.PureComponent {
 
     }
     const button={
-    margin:"12"
+      margin:"12"
 
     }
+
     return (
       <div>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
@@ -353,11 +361,10 @@ export default class Home extends React.PureComponent {
 
 
         <footer style={footer}>
-          <div style={link}></div>
-
+          <div style={link}>
+            <h1 style={copyright}>&copy; 2017 Web Design by Jason Lucas & Johnathan Marshall </h1>
+          </div>
         </footer>
-
-
         </Responsive>
         </div>
 
@@ -432,11 +439,12 @@ export default class Home extends React.PureComponent {
 
 
             <footer style={footer}>
-              <div style={link}></div>
+              <div style={link}>
+                <h1 style={copyright}>&copy; 2017 Web Design by Jason Lucas & Johnathan Marshall</h1>
+              </div>
             </footer>
-
-        </Responsive>
-        </div>
+            </Responsive>
+            </div>
 
 
 
